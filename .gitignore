@@ -4,3 +4,4 @@ configuration-service/configuration-service.iml
 configuration-service/target/
 spring-cloud-netflix-microservice-rabbitmq-camel-docker-travel-environment.iml
 /discovery-service/discovery-service.iml
+/air-trafic-service/air-trafic-service.iml
