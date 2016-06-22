@@ -15,11 +15,11 @@ airtrafficservice:
   links:
    - discovery
    - configserver
-#gateway:
-#  image: sitedoph/api-gateway-microservice
-#  ports:
-#   - "10000:10000"
-#  links:
-#   - discovery
-#   - configserver
-#   - user
+gateway:
+  image: sitedoph/gateway-service
+  ports:
+   - "10000:10000"
+  links:
+   - discovery
+   - configserver
+   - airtrafficservice
