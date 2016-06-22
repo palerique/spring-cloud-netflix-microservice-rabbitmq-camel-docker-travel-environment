@@ -28,6 +28,14 @@ airtrafficservice:
    - rabbitmq
    - discovery
    - configserver
+integrationservice:
+  image: sitedoph/air-traffic-service
+  ports:
+   - "9005:9005"
+  links:
+   - rabbitmq
+   - discovery
+   - configserver
 gateway:
   image: sitedoph/gateway-service
   ports:
@@ -37,3 +45,4 @@ gateway:
    - discovery
    - configserver
    - airtrafficservice
+   - integrationservice

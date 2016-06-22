@@ -27,6 +27,7 @@
         <module>discovery-service</module>
         <module>configuration-service</module>
         <module>air-traffic-service</module>
+        <module>integration-service</module>
         <module>gateway-service</module>
         <!--<module>tam-real-time-push-service</module>-->
         <!--<module>lan-real-time-push-service</module>-->
