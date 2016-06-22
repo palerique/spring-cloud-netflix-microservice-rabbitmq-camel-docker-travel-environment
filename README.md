@@ -30,6 +30,13 @@ This project contains two discovery services, one on Netflix Eureka, and the oth
 
 Each microservice will coordinate with Eureka to retrieve API routes for the entire cluster. Using this strategy each microservice in a cluster can be load balanced and exposed through one API gateway. Each service will automatically discover and route API requests to the service that owns the route. This proxying technique is equally helpful when developing user interfaces, as the full API of the platform is available through its own host as a proxy.
 
+# Running Services
+
+* [Eureka - localhost:8761](http://localhost:8761/)
+* [Air Traffic Service API - localhost:9005/musketeers](http://localhost:9005/musketeers)
+* [Air Traffic Service API Throught Gateway - localhost:10000/airtraffic/musketeers](http://localhost:10000/airtraffic/musketeers)
+* [RabbitMQ Console - localhost:15672 - user = guest password = guest](http://localhost:15672/)
+
 # References
 
 1 - [Building Microservices with Spring Cloud and Docker](http://www.kennybastani.com/2015/07/spring-cloud-docker-microservices.html)

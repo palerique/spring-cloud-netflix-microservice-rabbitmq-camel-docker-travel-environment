@@ -1,18 +1,31 @@
+rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rabbitmq
+    ports:
+     - "5672:5672"
+     - "15672:15672"
+    environment:
+     - RABBITMQ_DEFAULT_USER=guest
+     - RABBITMQ_DEFAULT_PASS=guest
 discovery:
   image: sitedoph/discovery-service
   ports:
    - "8761:8761"
+  links:
+   - rabbitmq
 configserver:
   image: sitedoph/configuration-service
   ports:
    - "8888:8888"
   links:
+   - rabbitmq
    - discovery
 airtrafficservice:
   image: sitedoph/air-traffic-service
   ports:
    - "9005:9005"
   links:
+   - rabbitmq
    - discovery
    - configserver
 gateway:
@@ -20,6 +33,7 @@ gateway:
   ports:
    - "10000:10000"
   links:
+   - rabbitmq
    - discovery
    - configserver
    - airtrafficservice
