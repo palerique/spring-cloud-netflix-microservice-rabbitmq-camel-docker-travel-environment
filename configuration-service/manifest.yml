@@ -1,0 +1,7 @@
+---
+applications:
+- name: configuration-service
+  host: configuration-service-${random-word}
+  memory: 512M
+  instances: 1
+  path: target/configuration-service-1.0-SNAPSHOT.jar

@@ -1,0 +1,25 @@
+#discovery:
+#  image: sitedoph/discovery-microservice
+#  ports:
+#   - "8761:8761"
+configserver:
+  image: sitedoph/configuration-service
+  ports:
+   - "8888:8888"
+#  links:
+#   - discovery
+#gateway:
+#  image: sitedoph/api-gateway-microservice
+#  ports:
+#   - "10000:10000"
+#  links:
+#   - discovery
+#   - configserver
+#   - user
+#   - movie
+#   - recommendation
+#movie:
+#  image: sitedoph/movie-microservice
+#  links:
+#   - discovery
+#   - configserver
