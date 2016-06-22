@@ -1,8 +1,14 @@
 spring:
   application:
     name: airtraffic
+    exchange: airtraffic-exchange
+    queue: airtraffic-queue
   cloud:
     config:
       uri: http://configserver:8888
+  rabbitmq:
+    hostname: localhost
+    username: guest
+    password: guest
 encrypt:
   failOnError: false
