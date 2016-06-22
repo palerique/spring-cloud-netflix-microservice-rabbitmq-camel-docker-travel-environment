@@ -1,0 +1,10 @@
+server.port: 8888
+
+spring:
+  application:
+    name: configserver
+    index: ${random.int}
+  cloud.config:
+    server:
+      git.uri: https://github.com/palerique/spring-cloud-netflix-microservice-rabbitmq-camel-docker-travel-environment-config-repo.git
+      bootstrap: true
