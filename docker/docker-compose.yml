@@ -1,13 +1,13 @@
-#discovery:
-#  image: sitedoph/discovery-microservice
-#  ports:
-#   - "8761:8761"
+discovery:
+  image: sitedoph/discovery-service
+  ports:
+   - "8761:8761"
 configserver:
   image: sitedoph/configuration-service
   ports:
    - "8888:8888"
-#  links:
-#   - discovery
+  links:
+   - discovery
 #gateway:
 #  image: sitedoph/api-gateway-microservice
 #  ports:

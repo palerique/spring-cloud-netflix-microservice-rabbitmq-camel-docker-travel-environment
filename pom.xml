@@ -24,8 +24,8 @@
     </properties>
 
     <modules>
+        <module>discovery-service</module>
         <module>configuration-service</module>
-        <!--<module>discovery-service</module>-->
         <!--<module>air-trafic-service</module>-->
         <!--<module>tam-real-time-push-service</module>-->
         <!--<module>lan-real-time-push-service</module>-->
